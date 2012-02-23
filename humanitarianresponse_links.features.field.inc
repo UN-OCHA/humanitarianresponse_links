@@ -75,7 +75,7 @@ function humanitarianresponse_links_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '4',
+        'weight' => '20',
       ),
     ),
   );
@@ -145,7 +145,7 @@ function humanitarianresponse_links_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '5',
+        'weight' => '25',
       ),
     ),
   );
@@ -156,4 +156,10 @@ function humanitarianresponse_links_field_default_fields() {
   t('Theme(s)');
 
   return $fields;
+}
+
+function humanitarianresponse_links_field_default_fields_alter(&$fields) {
+  if (isset($fields['node-link-field_link_category'])) {
+    $fields['node-link-field_link_category']['field_instance']['widget']['weight'] = '26';
+  }
 }
