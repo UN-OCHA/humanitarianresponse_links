@@ -24,6 +24,7 @@ function humanitarianresponse_links_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Links';
   $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['use_more_text'] = 'View all';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -218,28 +219,6 @@ function humanitarianresponse_links_views_default_views() {
   $handler->display->display_options['arguments']['tid']['reduce_duplicates'] = 0;
   $handler->display->display_options['arguments']['tid']['set_breadcrumb'] = 0;
   $handler->display->display_options['path'] = 'taxonomy/term/%/links';
-  $translatables['links'] = array(
-    t('Master'),
-    t('Links'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('There are no links to display'),
-    t('[field_link_url]'),
-    t('[field_link_description]'),
-    t('Block'),
-    t('Cluster'),
-    t('All'),
-    t('View panes'),
-    t('Links Per Term'),
-    t('%1 Links'),
-  );
   $export['links'] = $view;
 
   return $export;
