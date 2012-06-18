@@ -10,7 +10,7 @@
 function humanitarianresponse_links_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-link-field_clusters'
+  // Exported field: 'node-link-field_clusters'.
   $fields['node-link-field_clusters'] = array(
     'field_config' => array(
       'active' => '1',
@@ -31,6 +31,7 @@ function humanitarianresponse_links_field_default_fields() {
           0 => 'tid',
         ),
       ),
+      'locked' => '0',
       'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
@@ -39,6 +40,7 @@ function humanitarianresponse_links_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -80,7 +82,7 @@ function humanitarianresponse_links_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-link-field_link_description'
+  // Exported field: 'node-link-field_link_description'.
   $fields['node-link-field_link_description'] = array(
     'field_config' => array(
       'active' => '1',
@@ -101,6 +103,7 @@ function humanitarianresponse_links_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -146,7 +149,7 @@ function humanitarianresponse_links_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-link-field_link_url'
+  // Exported field: 'node-link-field_link_url'.
   $fields['node-link-field_link_url'] = array(
     'field_config' => array(
       'active' => '1',
@@ -156,6 +159,7 @@ function humanitarianresponse_links_field_default_fields() {
       'field_name' => 'field_link_url',
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'link',
       'settings' => array(
         'attributes' => array(
@@ -228,7 +232,7 @@ function humanitarianresponse_links_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-link-field_themes'
+  // Exported field: 'node-link-field_themes'.
   $fields['node-link-field_themes'] = array(
     'field_config' => array(
       'active' => '1',
@@ -249,6 +253,7 @@ function humanitarianresponse_links_field_default_fields() {
           0 => 'tid',
         ),
       ),
+      'locked' => '0',
       'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
@@ -257,6 +262,7 @@ function humanitarianresponse_links_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
