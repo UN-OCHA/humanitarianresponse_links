@@ -214,6 +214,28 @@ function humanitarianresponse_links_views_default_views() {
   $handler->display->display_options['arguments']['tid']['reduce_duplicates'] = 0;
   $handler->display->display_options['arguments']['tid']['set_breadcrumb'] = 0;
   $handler->display->display_options['block_description'] = 'Links per term';
+  $translatables['links'] = array(
+    t('Master'),
+    t('Links'),
+    t('View all'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('There are no links'),
+    t('[field_link_url]'),
+    t('[field_link_description]'),
+    t('Block'),
+    t('more'),
+    t('Links Per Term'),
+    t('All'),
+    t('Block per term'),
+    t('Links per term'),
+  );
   $export['links'] = $view;
 
   return $export;
