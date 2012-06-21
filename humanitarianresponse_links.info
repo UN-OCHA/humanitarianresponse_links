@@ -5,7 +5,6 @@ package = Humanitarianresponse
 php = 5.2.4
 dependencies[] = humanitarianresponse_clusters
 dependencies[] = humanitarianresponse_themes
-dependencies[] = i18n_taxonomy
 dependencies[] = link
 dependencies[] = strongarm
 dependencies[] = title
