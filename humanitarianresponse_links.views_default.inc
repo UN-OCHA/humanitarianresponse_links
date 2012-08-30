@@ -10,7 +10,7 @@
 function humanitarianresponse_links_views_default_views() {
   $export = array();
 
-  $view = new view;
+  $view = new view();
   $view->name = 'links';
   $view->description = '';
   $view->tag = 'default';
@@ -24,6 +24,7 @@ function humanitarianresponse_links_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Links';
   $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'View all';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -39,87 +40,37 @@ function humanitarianresponse_links_views_default_views() {
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
-  $handler->display->display_options['empty']['area']['empty'] = FALSE;
   $handler->display->display_options['empty']['area']['content'] = 'There are no links';
   $handler->display->display_options['empty']['area']['format'] = 'plain_text';
-  $handler->display->display_options['empty']['area']['tokenize'] = 0;
   /* Field: Content: Description */
   $handler->display->display_options['fields']['field_link_description']['id'] = 'field_link_description';
   $handler->display->display_options['fields']['field_link_description']['table'] = 'field_data_field_link_description';
   $handler->display->display_options['fields']['field_link_description']['field'] = 'field_link_description';
   $handler->display->display_options['fields']['field_link_description']['label'] = '';
   $handler->display->display_options['fields']['field_link_description']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_link_description']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['field_link_description']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['field_link_description']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['field_link_description']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['field_link_description']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_link_description']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['field_link_description']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['field_link_description']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['field_link_description']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['field_link_description']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_link_description']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['field_link_description']['alter']['html'] = 0;
   $handler->display->display_options['fields']['field_link_description']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_link_description']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['field_link_description']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['field_link_description']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['field_link_description']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['field_link_description']['field_api_classes'] = 0;
   /* Field: Content: URL */
   $handler->display->display_options['fields']['field_link_url']['id'] = 'field_link_url';
   $handler->display->display_options['fields']['field_link_url']['table'] = 'field_data_field_link_url';
   $handler->display->display_options['fields']['field_link_url']['field'] = 'field_link_url';
   $handler->display->display_options['fields']['field_link_url']['label'] = '';
   $handler->display->display_options['fields']['field_link_url']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_link_url']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['field_link_url']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['field_link_url']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['field_link_url']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['field_link_url']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_link_url']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['field_link_url']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['field_link_url']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['field_link_url']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['field_link_url']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_link_url']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['field_link_url']['alter']['html'] = 0;
   $handler->display->display_options['fields']['field_link_url']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_link_url']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['field_link_url']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['field_link_url']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['field_link_url']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_link_url']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_link_url']['type'] = 'link_plain';
-  $handler->display->display_options['fields']['field_link_url']['field_api_classes'] = 0;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['make_link'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['path'] = '[field_link_url]';
-  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['trim_whitespace'] = 0;
   $handler->display->display_options['fields']['title']['alter']['alt'] = '[field_link_description]';
   $handler->display->display_options['fields']['title']['alter']['target'] = '_blank';
-  $handler->display->display_options['fields']['title']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['title']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -142,6 +93,7 @@ function humanitarianresponse_links_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
@@ -155,6 +107,7 @@ function humanitarianresponse_links_views_default_views() {
 
   /* Display: Links Per Term */
   $handler = $view->new_display('page', 'Links Per Term', 'page_1');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -162,14 +115,10 @@ function humanitarianresponse_links_views_default_views() {
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
   $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
-  $handler->display->display_options['arguments']['tid']['default_argument_options']['term_page'] = 1;
-  $handler->display->display_options['arguments']['tid']['default_argument_options']['node'] = 0;
-  $handler->display->display_options['arguments']['tid']['default_argument_options']['limit'] = 0;
-  $handler->display->display_options['arguments']['tid']['default_argument_skip_url'] = 0;
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['tid']['specify_validation'] = 1;
+  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
     'clusters' => 'clusters',
@@ -177,16 +126,11 @@ function humanitarianresponse_links_views_default_views() {
     'emergencies' => 'emergencies',
     'funding' => 'funding',
   );
-  $handler->display->display_options['arguments']['tid']['validate_options']['transform'] = 0;
-  $handler->display->display_options['arguments']['tid']['break_phrase'] = 0;
-  $handler->display->display_options['arguments']['tid']['add_table'] = 0;
-  $handler->display->display_options['arguments']['tid']['require_value'] = 0;
-  $handler->display->display_options['arguments']['tid']['reduce_duplicates'] = 0;
-  $handler->display->display_options['arguments']['tid']['set_breadcrumb'] = 0;
   $handler->display->display_options['path'] = 'taxonomy/term/%/links';
 
   /* Display: Block per term */
   $handler = $view->new_display('block', 'Block per term', 'block_1');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -200,14 +144,10 @@ function humanitarianresponse_links_views_default_views() {
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
   $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
-  $handler->display->display_options['arguments']['tid']['default_argument_options']['term_page'] = 1;
-  $handler->display->display_options['arguments']['tid']['default_argument_options']['node'] = 0;
-  $handler->display->display_options['arguments']['tid']['default_argument_options']['limit'] = 0;
-  $handler->display->display_options['arguments']['tid']['default_argument_skip_url'] = 0;
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['tid']['specify_validation'] = 1;
+  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
     'clusters' => 'clusters',
@@ -215,12 +155,6 @@ function humanitarianresponse_links_views_default_views() {
     'emergencies' => 'emergencies',
     'funding' => 'funding',
   );
-  $handler->display->display_options['arguments']['tid']['validate_options']['transform'] = 0;
-  $handler->display->display_options['arguments']['tid']['break_phrase'] = 0;
-  $handler->display->display_options['arguments']['tid']['add_table'] = 0;
-  $handler->display->display_options['arguments']['tid']['require_value'] = 0;
-  $handler->display->display_options['arguments']['tid']['reduce_duplicates'] = 0;
-  $handler->display->display_options['arguments']['tid']['set_breadcrumb'] = 0;
   $handler->display->display_options['block_description'] = 'Links per term';
   $translatables['links'] = array(
     t('Master'),
@@ -234,8 +168,11 @@ function humanitarianresponse_links_views_default_views() {
     t('Items per page'),
     t('- All -'),
     t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
     t('There are no links'),
-    t('[field_link_url]'),
     t('[field_link_description]'),
     t('_blank'),
     t('Block'),
