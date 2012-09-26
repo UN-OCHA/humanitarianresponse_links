@@ -85,7 +85,7 @@ function humanitarianresponse_links_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '3',
+        'weight' => '4',
       ),
     ),
   );
@@ -165,7 +165,7 @@ function humanitarianresponse_links_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '5',
+        'weight' => '8',
       ),
     ),
   );
@@ -238,7 +238,7 @@ function humanitarianresponse_links_field_default_fields() {
           'rows' => '2',
         ),
         'type' => 'text_textarea',
-        'weight' => '1',
+        'weight' => '10',
       ),
     ),
   );
@@ -407,7 +407,7 @@ function humanitarianresponse_links_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '4',
+        'weight' => '6',
       ),
     ),
   );
