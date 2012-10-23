@@ -90,6 +90,86 @@ function humanitarianresponse_links_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-link-field_display_properties'.
+  $fields['node-link-field_display_properties'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_display_properties',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'display_properties',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'link',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 10,
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_display_properties',
+      'label' => 'Properties',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '12',
+      ),
+    ),
+  );
+
   // Exported field: 'node-link-field_emergencies'.
   $fields['node-link-field_emergencies'] = array(
     'field_config' => array(
@@ -238,7 +318,7 @@ function humanitarianresponse_links_field_default_fields() {
           'rows' => '2',
         ),
         'type' => 'text_textarea',
-        'weight' => '12',
+        'weight' => '14',
       ),
     ),
   );
@@ -574,6 +654,7 @@ function humanitarianresponse_links_field_default_fields() {
   t('Description');
   t('Emergencies');
   t('Location');
+  t('Properties');
   t('Theme(s)');
   t('Title');
   t('URL');
