@@ -43,6 +43,7 @@ function humanitarianresponse_links_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -79,6 +80,7 @@ function humanitarianresponse_links_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
+        'entity_translation_sync' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
@@ -123,6 +125,7 @@ function humanitarianresponse_links_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -159,6 +162,7 @@ function humanitarianresponse_links_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
+        'entity_translation_sync' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
@@ -203,6 +207,7 @@ function humanitarianresponse_links_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -239,6 +244,7 @@ function humanitarianresponse_links_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
+        'entity_translation_sync' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
@@ -283,6 +289,7 @@ function humanitarianresponse_links_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -319,6 +326,7 @@ function humanitarianresponse_links_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
+        'entity_translation_sync' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
@@ -353,7 +361,9 @@ function humanitarianresponse_links_field_default_fields() {
       ),
       'locked' => '0',
       'module' => 'text',
-      'settings' => array(),
+      'settings' => array(
+        'entity_translation_sync' => FALSE,
+      ),
       'translatable' => '0',
       'type' => 'text_long',
     ),
@@ -390,6 +400,7 @@ function humanitarianresponse_links_field_default_fields() {
       'settings' => array(
         'text_processing' => '0',
         'user_register_form' => FALSE,
+        'entity_translation_sync' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
@@ -429,6 +440,7 @@ function humanitarianresponse_links_field_default_fields() {
         'title_maxlength' => 128,
         'title_value' => '',
         'url' => 0,
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'link_field',
@@ -481,6 +493,7 @@ function humanitarianresponse_links_field_default_fields() {
         'url' => 0,
         'user_register_form' => FALSE,
         'validate_url' => 1,
+        'entity_translation_sync' => FALSE,
       ),
       'widget' => array(
         'active' => 0,
@@ -525,6 +538,7 @@ function humanitarianresponse_links_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -561,6 +575,7 @@ function humanitarianresponse_links_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
+        'entity_translation_sync' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
@@ -605,6 +620,7 @@ function humanitarianresponse_links_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -641,6 +657,7 @@ function humanitarianresponse_links_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
+        'entity_translation_sync' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
@@ -680,6 +697,7 @@ function humanitarianresponse_links_field_default_fields() {
       'module' => 'text',
       'settings' => array(
         'max_length' => 255,
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '1',
       'type' => 'text',
@@ -716,6 +734,7 @@ function humanitarianresponse_links_field_default_fields() {
       'settings' => array(
         'text_processing' => 0,
         'user_register_form' => FALSE,
+        'entity_translation_sync' => FALSE,
       ),
       'widget' => array(
         'module' => 'text',
