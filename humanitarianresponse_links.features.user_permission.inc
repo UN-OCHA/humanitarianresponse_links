@@ -14,7 +14,7 @@ function humanitarianresponse_links_user_default_permissions() {
   $permissions['create link content'] = array(
     'name' => 'create link content',
     'roles' => array(
-      0 => 'editor',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -23,7 +23,7 @@ function humanitarianresponse_links_user_default_permissions() {
   $permissions['delete own link content'] = array(
     'name' => 'delete own link content',
     'roles' => array(
-      0 => 'editor',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -32,7 +32,7 @@ function humanitarianresponse_links_user_default_permissions() {
   $permissions['edit own link content'] = array(
     'name' => 'edit own link content',
     'roles' => array(
-      0 => 'editor',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
