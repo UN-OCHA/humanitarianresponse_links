@@ -248,7 +248,6 @@ function humanitarianresponse_links_views_default_views() {
     t('last »'),
     t('There are no links'),
     t('[field_link_description]'),
-    t('_blank'),
     t('Block'),
     t('more'),
     t('Links Per Term'),
