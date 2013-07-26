@@ -126,28 +126,6 @@ function humanitarianresponse_links_views_default_views() {
   $handler->display->display_options['filters']['promote']['value'] = '1';
   $handler->display->display_options['block_description'] = 'Links';
 
-  /* Display: Links Per Term */
-  $handler = $view->new_display('page', 'Links Per Term', 'page_1');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Has taxonomy term ID */
-  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
-  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['tid']['validate']['fail'] = 'ignore';
-  $handler->display->display_options['path'] = 'taxonomy/term/%/links';
-  $handler->display->display_options['menu']['type'] = 'tab';
-  $handler->display->display_options['menu']['title'] = 'Links';
-  $handler->display->display_options['menu']['weight'] = '10';
-  $handler->display->display_options['menu']['context'] = 0;
-
   /* Display: Block per term */
   $handler = $view->new_display('block', 'Block per term', 'block_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
@@ -271,9 +249,8 @@ function humanitarianresponse_links_views_default_views() {
     t('[field_link_description]'),
     t('Block'),
     t('more'),
-    t('Links Per Term'),
-    t('All'),
     t('Block per term'),
+    t('All'),
     t('Links per term'),
     t('Key'),
     t('Key Links'),
