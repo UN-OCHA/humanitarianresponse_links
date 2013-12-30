@@ -93,7 +93,7 @@ function humanitarianresponse_links_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '50',
+          'weight' => '11',
         ),
       ),
       'display' => array(),
